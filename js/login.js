@@ -105,7 +105,7 @@ console.log("login.js carregado com sucesso");
 
 
 
-window.function atualizarBotao() {
+window.atualizarBotao = function() {
     const input = document.getElementById("usernameInput").value;
     const botao = document.getElementById("btnTestar");
 
