@@ -100,8 +100,9 @@ window.sair = function () {
 
 
 window.atualizarBotao = function() {
+    const botao = document.getElementById("btnTestar")
     let input = document.getElementById("usernameInput").value.trim();
-    const botao = document.getElementById("btnTestar");
+    ;
 
     if (input.length > 15) {
         input = input.substring(0, 15);
