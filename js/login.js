@@ -1,4 +1,34 @@
 /* ================= LOGIN ================= */
+// 🔹 Normaliza dados antigos / novos
+window.normalizarPlayer = function () {
+    if (!window.player) return;
+
+    // 🔹 Dados básicos
+    player.username ??= "Teste";
+    player.score ??= 0;
+    player.level ??= 1;
+    player.current ??= 0;
+
+    // 🔹 Estatísticas
+    player.correctAnswers ??= 0;
+    player.wrongAnswers ??= 0;
+    player.totalAnswered ??= 0;
+
+    // 🔹 Métricas extras
+    player.clicksCorrect ??= 0;
+    player.clicksWrong ??= 0;
+
+    // 🔹 Histórico
+    player.history ??= {};
+};
+
+
+// 🔹 Sair do jogo
+window.sair = function () {
+    exportUser();
+    location.href = "../index.html";
+};
+
 
 
 // 🔹 Carregar usuário salvo
@@ -86,36 +116,6 @@ window.updateUserInfo = function () {
     `;
 };
 
-
-// 🔹 Normaliza dados antigos / novos
-window.normalizarPlayer = function () {
-    if (!window.player) return;
-
-    // 🔹 Dados básicos
-    player.username ??= "Teste";
-    player.score ??= 0;
-    player.level ??= 1;
-    player.current ??= 0;
-
-    // 🔹 Estatísticas
-    player.correctAnswers ??= 0;
-    player.wrongAnswers ??= 0;
-    player.totalAnswered ??= 0;
-
-    // 🔹 Métricas extras
-    player.clicksCorrect ??= 0;
-    player.clicksWrong ??= 0;
-
-    // 🔹 Histórico
-    player.history ??= {};
-};
-
-
-// 🔹 Sair do jogo
-window.sair = function () {
-    exportUser();
-    location.href = "../index.html";
-};
 
 
 
