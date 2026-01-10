@@ -45,11 +45,16 @@ window.login = function () {
             username: name,
             score: 0,
             level: 1,
-            current: 0
+            current: 0,
+
+            // 🔹 CAMPOS QUE FALTAVAM
+            correctAnswers: 0,
+            wrongAnswers: 0,
+            totalAnswers: 0
         };
     }
 
-    normalizarPlayer();   // 👈 ESSENCIAL
+    normalizarPlayer();   // ainda é útil
     savePlayer();
 
     document.getElementById("login").style.display = "none";
@@ -58,9 +63,9 @@ window.login = function () {
     updateUserInfo();
     loadQuestion();
 
-    // 🐟 reaplica o crescimento visual
     setTimeout(crescerPeixe, 100);
-}
+};
+
 
 
 
