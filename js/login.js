@@ -1,15 +1,5 @@
 /* ================= LOGIN ================= */
-window.atualizarBotao = function() {
-    const botao = document.getElementById("btnTestar")
-    let input = document.getElementById("usernameInput").value.trim();
-    ;
 
-    if (input.length > 15) {
-        input = input.substring(0, 15);
-    }
-
-    botao.innerText = input || "Testa";
-}
 
 // 🔹 Carregar usuário salvo
 window.Carregar = function () {
@@ -122,6 +112,16 @@ window.sair = function () {
 // 🔎 Debug (opcional)
 console.log("login.js carregado com sucesso");
 
-// Blogger-safe export ensured
+window.atualizarBotao = function() {
+    const botao = document.getElementById("btnTestar")
+    let input = document.getElementById("usernameInput").value.trim();
+    ;
+
+    if (input.length > 15) {
+        input = input.substring(0, 15);
+    }
+
+    botao.innerText = input || "Testa";
+}
 
 
