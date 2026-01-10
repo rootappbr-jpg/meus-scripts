@@ -98,6 +98,19 @@ window.sair = function () {
 };
 
 
+
+window.atualizarBotao = function() {
+    let input = document.getElementById("usernameInput").value.trim();
+    const botao = document.getElementById("btnTestar");
+
+    if (input.length > 15) {
+        input = input.substring(0, 15);
+    }
+
+    botao.innerText = input || "Testar";
+}
+
+
 // 🔎 Debug (opcional)
 console.log("login.js carregado com sucesso");
 
