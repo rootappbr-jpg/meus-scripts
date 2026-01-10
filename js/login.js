@@ -8,7 +8,7 @@ window.atualizarBotao = function() {
         input = input.substring(0, 15);
     }
 
-    botao.innerText = input || "Testar";
+    botao.innerText = input || "Testa";
 }
 
 // 🔹 Carregar usuário salvo
