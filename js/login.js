@@ -39,9 +39,9 @@ window.login = function () {
     const saved = localStorage.getItem("player_" + name);
 
     if (saved) {
-        window.player = JSON.parse(saved);
+        player = JSON.parse(saved);
     } else {
-        window.player = {
+        player = {
             username: name,
             score: 0,
             level: 1,
@@ -60,7 +60,8 @@ window.login = function () {
 
     // 🐟 reaplica o crescimento visual
     setTimeout(crescerPeixe, 100);
-};    
+}
+
 
 
 // 🔹 Salvar jogador
