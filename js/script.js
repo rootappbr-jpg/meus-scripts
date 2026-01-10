@@ -276,6 +276,7 @@ window.toggleHint = function toggleHint() {
   hint.style.display = visivel ? "none" : "block";
   hintOff.style.display = visivel ? "block" : "none";
   player.score--;
+ BtDica.style.display = visivel ? "none" : "block";	
   updateUserInfo();
 }
 
