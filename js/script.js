@@ -385,7 +385,6 @@ window.mostrarDica = function() {
  window.esconderDica = function() {
   const hint = document.getElementById("hint");
   const example = document.getElementById("example");
-
   hint.style.display = "none";
   example.style.display = "none";
  }
