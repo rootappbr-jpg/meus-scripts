@@ -102,3 +102,12 @@ window.sair = function () {
 console.log("login.js carregado com sucesso");
 
 // Blogger-safe export ensured
+
+
+
+window.function atualizarBotao() {
+    const input = document.getElementById("usernameInput").value;
+    const botao = document.getElementById("btnTestar");
+
+    botao.innerText = input || "Testar";
+}
