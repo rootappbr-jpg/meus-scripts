@@ -49,7 +49,7 @@ window.login = function () {
 
     // 🐟 reaplica o crescimento visual
     setTimeout(crescerPeixe, 100);
-};
+};    
 
 
 // 🔹 Salvar jogador
