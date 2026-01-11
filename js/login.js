@@ -62,15 +62,17 @@ window.login = function () {
         player = JSON.parse(saved);
     } else {
         player = {
-            username: name,
-            score: 0,
-            level: 1,
-            current: 0,
+              username: name,
+              score: 52,
+              level: 6,
+              current: 90,
+              totalAnswered: 92,
+              correctAnswers: 75,
+              wrongAnswers: 17,
+              clicksCorrect: 75,
+              clicksWrong: 17,
 
-            // 🔹 CAMPOS QUE FALTAVAM
-            correctAnswers: 0,
-            wrongAnswers: 0,
-            totalAnswers: 0
+
         };
     }
 
