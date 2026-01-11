@@ -120,6 +120,6 @@ window.sair = function () {
 
 
 // 🔎 Debug (opcional)
-console.log("login.js carregado com sucesso");
-
+console.log("login6.js carregado com sucesso");
+console.log("script.js carregado com sucesso");
 // Blogger-safe export ensured
