@@ -81,13 +81,25 @@ window.updateUserInfo = function () {
 
 
 // 🔹 Normaliza dados antigos / novos
+// 🔹 Normaliza dados antigos / novos e evita erros de "null"
 window.normalizarPlayer = function () {
-    player.correctAnswers ?? = 0;
-    player.wrongAnswers ??= 0;
-    player.totalAnswered ??= 0;
-    player.clicksCorrect ??= 0;
-    player.clicksWrong ??= 0;
-    player.history ??= {};
+    // 🛡️ Se o player for null ou undefined, inicializa como objeto vazio
+    if (!window.player) {
+        window.player = {};
+    }
+
+    // 🛡️ Garante que cada propriedade exista sem sobrescrever valores reais
+    window.player.correctAnswers = window.player.correctAnswers ?? 0;
+    window.player.wrongAnswers = window.player.wrongAnswers ?? 0;
+    window.player.totalAnswered = window.player.totalAnswered ?? 0;
+    window.player.clicksCorrect = window.player.clicksCorrect ?? 0;
+    window.player.clicksWrong = window.player.clicksWrong ?? 0;
+    window.player.history = window.player.history ?? {};
+    
+    // Garante propriedades básicas de navegação
+    window.player.level = window.player.level ?? 1;
+    window.player.score = window.player.score ?? 0;
+    window.player.current = window.player.current ?? 0;
 };
 
 
