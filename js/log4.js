@@ -8,7 +8,6 @@ window.Carregar = function () {
         if (!window.player) return;
 
         normalizarPlayer();
-        savePlayer();
 
         document.getElementById("login").style.display = "none";
         document.getElementById("game").style.display = "block";
