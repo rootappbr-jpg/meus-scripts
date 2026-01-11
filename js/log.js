@@ -82,6 +82,9 @@ window.updateUserInfo = function () {
 
 // 🔹 Normaliza dados antigos / novos
 window.normalizarPlayer = function () {
+    // Ensure player is an object before trying to access its properties
+    window.player = window.player ?? {}; // Initialize player as an empty object if it's null or undefined
+
     player.correctAnswers ??= 0;
     player.wrongAnswers ??= 0;
     player.totalAnswered ??= 0;
@@ -89,6 +92,7 @@ window.normalizarPlayer = function () {
     player.clicksWrong ??= 0;
     player.history ??= {};
 };
+
 
 
 // 🔹 Sair do jogo
