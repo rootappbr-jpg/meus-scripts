@@ -21,6 +21,7 @@ window.Carregar = function () {
 
 
 // 🔹 Login / Novo jogador
+// 🔹 Login / Novo jogador
 window.login = function () {
     const input = document.getElementById("usernameInput");
     const name = input.value.trim() || "Teste";
@@ -28,24 +29,26 @@ window.login = function () {
     const saved = localStorage.getItem("player_" + name);
 
     if (saved) {
-        // 🔹 1. Primeiro carregamos os dados
         window.player = JSON.parse(saved);
     } else {
-        // 🔹 2. Ou criamos o objeto básico
+        // ✅ Player já nasce COMPLETO
         window.player = {
             username: name,
             score: 0,
             level: 1,
-            current: 0
-			correctAnswers: 92,
-			wrongAnswers: 25,
-			clicksCorrect: 92,
-			clicksWrong: 25,
+            current: 0,
+
+            totalAnswered: 0,
+            correctAnswers: 0,
+            wrongAnswers: 0,
+            clicksCorrect: 0,
+            clicksWrong: 0,
+            history: {}
         };
     }
 
-    // 🔹 3. AGORA chamamos a normalização (ela não encontrará mais o player como null)
-    normalizarPlayer();   
+    // 🔹 Normaliza versões antigas (ESSENCIAL)
+    normalizarPlayer();
     savePlayer();
 
     document.getElementById("login").style.display = "none";
@@ -54,8 +57,10 @@ window.login = function () {
     updateUserInfo();
     loadQuestion();
 
+    // 🐟 reaplica o crescimento visual
     setTimeout(crescerPeixe, 100);
 };
+
 
 
 // 🔹 Salvar jogador
