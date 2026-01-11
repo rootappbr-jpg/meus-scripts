@@ -82,9 +82,13 @@ window.updateUserInfo = function () {
 
 // 🔹 Normaliza dados antigos / novos
 window.normalizarPlayer = function () {
-    player.correctAnswers ??= 0;
-    player.wrongAnswers ??= 0;
+      username: 'name',
+      score: 0,
+      level: 0,
+    current": 0,
     player.totalAnswered ??= 0;
+    player.correctAnswers ??= 0;    
+    player.wrongAnswers ??= 0;
     player.clicksCorrect ??= 0;
     player.clicksWrong ??= 0;
     player.history ??= {};
