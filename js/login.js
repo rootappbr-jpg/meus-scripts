@@ -1,27 +1,5 @@
 /* ================= LOGIN ================= */
-// 🔹 Normaliza dados antigos / novos
-window.normalizarPlayer = function () {
-    if (!window.player) return;
 
-    // 🔹 Dados básicos
-    player.username ??= "Testando";
-    player.score ??= 0;
-    player.level ??= 0;
-    player.current ??= 0;
-
-    // 🔹 Estatísticas
-    player.totalAnswered ??= 0;
-    player.correctAnswers ??= 0;    
-    player.wrongAnswers ??= 0;
-
-
-    // 🔹 Métricas extras
-    player.clicksCorrect ??= 0;
-    player.clicksWrong ??= 0;
-
-    // 🔹 Histórico
-    player.history ??= {};
-};
 
 
 // 🔹 Sair do jogo
