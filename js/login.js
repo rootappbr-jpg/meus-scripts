@@ -85,8 +85,8 @@ window.normalizarPlayer = function () {
       username: 'name',
       score: 0,
       level: 0,
-    current": 0,
-    player.totalAnswered ??= 0;
+    current: 0,
+    player.totalAnswered = 0;
     player.correctAnswers ??= 0;    
     player.wrongAnswers ??= 0;
     player.clicksCorrect ??= 0;
