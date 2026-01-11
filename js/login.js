@@ -4,15 +4,16 @@ window.normalizarPlayer = function () {
     if (!window.player) return;
 
     // 🔹 Dados básicos
-    player.username ??= "Teste";
+    player.username ??= "Testando";
     player.score ??= 0;
-    player.level ??= 1;
+    player.level ??= 0;
     player.current ??= 0;
 
     // 🔹 Estatísticas
-    player.correctAnswers ??= 0;
-    player.wrongAnswers ??= 0;
     player.totalAnswered ??= 0;
+    player.correctAnswers ??= 0;    
+    player.wrongAnswers ??= 0;
+
 
     // 🔹 Métricas extras
     player.clicksCorrect ??= 0;
