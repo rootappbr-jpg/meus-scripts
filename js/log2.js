@@ -27,16 +27,18 @@ window.login = function () {
 
     const saved = localStorage.getItem("player_" + name);
 
-    if (saved) {
-        window.player = JSON.parse(saved);
-    } else {
-        window.player = {
-            username: name,
-            score: 0,
-            level: 1,
-            current: 0
-        };
-    }
+// No login.js, dentro da função window.Carregar ou window.login
+if (saved) {
+    window.player = JSON.parse(saved);
+} else {
+    window.player = {
+        username: name,
+        score: 0,
+        level: 1,
+        current: 0,
+        correctAnswers: 0 // Garanta que comece em 0
+    };
+}
 
     normalizarPlayer();   // 👈 ESSENCIAL
     savePlayer();
@@ -82,7 +84,6 @@ window.updateUserInfo = function () {
 
 // 🔹 Normaliza dados antigos / novos
 window.normalizarPlayer = function () {
-    // Ensure player is an object before trying to access its properties
     window.player = window.player ?? {}; // Initialize player as an empty object if it's null or undefined
 
     player.correctAnswers ??= 0;
